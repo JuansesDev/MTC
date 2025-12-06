@@ -55,3 +55,18 @@ deb_build/
 ppa_build/
 bin/
 obj/
+
+# Documentation
+roadmap.md
+
+# Logs
+error.log
+
+# Test Output Directories
+test-clean/
+test-console/
+test-mvc/
+test-vertical/
+temp_verify/
+output-test/
+local-tools/
