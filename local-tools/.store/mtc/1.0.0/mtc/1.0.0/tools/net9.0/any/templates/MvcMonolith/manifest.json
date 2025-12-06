@@ -1,0 +1,14 @@
+{
+    "Name": "MvcMonolith",
+    "Description": "A classic ASP.NET Core MVC Monolithic Application",
+    "Version": "1.0.0",
+    "Author": "MTC",
+    "Tags": [
+        "MVC",
+        "Web",
+        "C#"
+    ],
+    "Variables": {
+        "Name": "string"
+    }
+}

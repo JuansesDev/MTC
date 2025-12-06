@@ -1,0 +1,15 @@
+{
+    "Name": "VerticalSliceFeature",
+    "Description": "A Vertical Slice Feature (Entity, CQRS, Controller)",
+    "Version": "1.0.0",
+    "Author": "MTC",
+    "Tags": [
+        "Vertical Slice",
+        "Feature",
+        "CQRS"
+    ],
+    "Variables": {
+        "Name": "string",
+        "Properties": "list"
+    }
+}

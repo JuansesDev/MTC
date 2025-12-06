@@ -1,0 +1,16 @@
+{
+    "Name": "ValueObject",
+    "Description": "A Generic Value Object (Record)",
+    "Version": "1.0.0",
+    "Author": "MTC",
+    "Tags": [
+        "ValueObject",
+        "DDD",
+        "Common"
+    ],
+    "Variables": {
+        "Name": "string",
+        "Properties": "list",
+        "Namespace": "string"
+    }
+}

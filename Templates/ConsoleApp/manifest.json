@@ -1,0 +1,13 @@
+{
+    "Name": "ConsoleApp",
+    "Description": "A simple .NET Console Application",
+    "Version": "1.0.0",
+    "Author": "MTC",
+    "Tags": [
+        "Console",
+        "C#"
+    ],
+    "Variables": {
+        "Name": "string"
+    }
+}

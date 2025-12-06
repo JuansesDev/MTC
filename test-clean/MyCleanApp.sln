@@ -1,0 +1,40 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCleanApp.Domain", "MyCleanApp.Domain\MyCleanApp.Domain.csproj", "{GUID_DOMAIN}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCleanApp.Application", "MyCleanApp.Application\MyCleanApp.Application.csproj", "{GUID_APPLICATION}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCleanApp.Infrastructure", "MyCleanApp.Infrastructure\MyCleanApp.Infrastructure.csproj", "{GUID_INFRASTRUCTURE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCleanApp.API", "MyCleanApp.API\MyCleanApp.API.csproj", "{GUID_API}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{GUID_DOMAIN}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{GUID_DOMAIN}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{GUID_DOMAIN}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{GUID_DOMAIN}.Release|Any CPU.Build.0 = Release|Any CPU
+		{GUID_APPLICATION}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{GUID_APPLICATION}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{GUID_APPLICATION}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{GUID_APPLICATION}.Release|Any CPU.Build.0 = Release|Any CPU
+		{GUID_INFRASTRUCTURE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{GUID_INFRASTRUCTURE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{GUID_INFRASTRUCTURE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{GUID_INFRASTRUCTURE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{GUID_API}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{GUID_API}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{GUID_API}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{GUID_API}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

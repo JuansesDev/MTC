@@ -1,0 +1,15 @@
+{
+    "Name": "VerticalSlice",
+    "Description": "A Vertical Slice Architecture Solution (Single Project, Feature-based)",
+    "Version": "1.0.0",
+    "Author": "MTC",
+    "Tags": [
+        "Vertical Slice",
+        "CQRS",
+        "Web",
+        "C#"
+    ],
+    "Variables": {
+        "Name": "string"
+    }
+}

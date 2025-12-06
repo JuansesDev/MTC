@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	dotnet publish MTC/MTC.csproj -c Release -r linux-x64 --self-contained false -o bin/publish
+
+override_dh_auto_install:
+	mkdir -p debian/mtc/usr/lib/mtc
+	cp -r bin/publish/* debian/mtc/usr/lib/mtc/
+	mkdir -p debian/mtc/usr/bin
+	ln -s /usr/lib/mtc/MTC debian/mtc/usr/bin/mtc
+	mkdir -p debian/mtc/usr/share/mtc
+	cp -r Templates debian/mtc/usr/share/mtc/

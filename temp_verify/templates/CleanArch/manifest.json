@@ -1,0 +1,15 @@
+{
+    "Name": "CleanArch",
+    "Description": "A Clean Architecture Solution (Domain, Application, Infrastructure, API)",
+    "Version": "1.0.0",
+    "Author": "MTC",
+    "Tags": [
+        "Clean Architecture",
+        "DDD",
+        "Web",
+        "C#"
+    ],
+    "Variables": {
+        "Name": "string"
+    }
+}

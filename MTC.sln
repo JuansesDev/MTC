@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTC", "MTC\MTC.csproj", "{FBFB23FC-5CD7-4C79-9E6C-58433449DCE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTC.Tests", "MTC.Tests\MTC.Tests.csproj", "{986EED55-7FD5-4C12-B301-DC03965B0D95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MTC.IntegrationTests", "MTC.IntegrationTests\MTC.IntegrationTests.csproj", "{5FF65EBB-FC67-4184-9463-A7A772F0E6FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FBFB23FC-5CD7-4C79-9E6C-58433449DCE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBFB23FC-5CD7-4C79-9E6C-58433449DCE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBFB23FC-5CD7-4C79-9E6C-58433449DCE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBFB23FC-5CD7-4C79-9E6C-58433449DCE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{986EED55-7FD5-4C12-B301-DC03965B0D95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{986EED55-7FD5-4C12-B301-DC03965B0D95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{986EED55-7FD5-4C12-B301-DC03965B0D95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{986EED55-7FD5-4C12-B301-DC03965B0D95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF65EBB-FC67-4184-9463-A7A772F0E6FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF65EBB-FC67-4184-9463-A7A772F0E6FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF65EBB-FC67-4184-9463-A7A772F0E6FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF65EBB-FC67-4184-9463-A7A772F0E6FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

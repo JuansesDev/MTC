@@ -1,0 +1,15 @@
+Source: mtc
+Section: devel
+Priority: optional
+Maintainer: Juanse <juanse@example.com>
+Build-Depends: debhelper (>= 11), dotnet-sdk-9.0
+Standards-Version: 4.1.3
+Homepage: https://github.com/example/mtc
+
+Package: mtc
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, dotnet-runtime-9.0
+Description: Modular Template CLI for .NET
+ A powerful CLI tool for scaffolding .NET projects using
+ Clean Architecture, MVC, and Vertical Slice patterns.
+ It supports creating solutions, adding features, and managing templates.
