@@ -66,9 +66,9 @@ public class TemplateService : ITemplateService
                     templates.Add(new Template(manifest, dir));
                 }
             }
-            catch (Exception)
+            catch
             {
-                // Ignore malformed manifests
+                // Skip invalid manifests
             }
         }
 
