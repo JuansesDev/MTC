@@ -9,7 +9,7 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>mtc</ToolCommandName>
     <PackageId>MTC</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Juanse</Authors>
     <Description>Modular Template CLI for .NET</Description>
   </PropertyGroup>
