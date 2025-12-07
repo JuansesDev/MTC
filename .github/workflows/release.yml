@@ -26,6 +26,13 @@ jobs:
         chmod +x publish.sh
         ./publish.sh
         
+    - name: Build Debian Package
+      run: |
+        chmod +x build_deb.sh
+        VERSION=${{ github.ref_name }}
+        VERSION=${VERSION#V.}
+        ./build_deb.sh $VERSION
+
     - name: Pack NuGet Tool
       run: dotnet pack MTC/MTC.csproj -c Release -o nupkg
       
@@ -35,6 +42,7 @@ jobs:
         files: |
           dist/*.tar.gz
           dist/*.zip
+          dist/*.deb
           nupkg/*.nupkg
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,5 +52,38 @@ jobs:
       if: env.NUGET_API_KEY != ''
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+
+  aur-release:
+    needs: build-release
+    runs-on: ubuntu-latest
+    if: env.AUR_SSH_PRIVATE_KEY != ''
+    env:
+      AUR_SSH_PRIVATE_KEY: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Download Artifacts
+        uses: dsaltares/fetch-gh-release-asset@master
+        with:
+          version: tags/${{ github.ref_name }}
+          file: "mtc-linux-x64-.*.tar.gz"
+          regex: true
+          target: "dist/"
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to AUR
+        uses: KSXGitHub/github-actions-deploy-aur@v2.7.2
+        with:
+          pkgname: mtc-bin
+          pkgbuild: ./mtc-aur/PKGBUILD
+          commit_username: JuansesDev
+          commit_email: juansesdev@gmail.com
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          commit_message: "Update to ${{ github.ref_name }}"
+          ssh_keyscan_types: rsa,dsa,ecdsa,ed25519
+          force_push: true
+          updpkgsums: true
+          
+
 
 

@@ -3,7 +3,7 @@
 # Exit on error
 set -e
 
-VERSION="1.0.0"
+VERSION="${1:-1.0.0}"
 ARCH="amd64"
 PACKAGE_NAME="mtc"
 DEB_NAME="${PACKAGE_NAME}_${VERSION}_${ARCH}.deb"
