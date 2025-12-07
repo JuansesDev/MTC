@@ -6,7 +6,7 @@ set -e
 echo "🚀 Starting MTC Build Process..."
 
 # Define version
-VERSION="1.0.1"
+VERSION="1.0.2"
 OUTPUT_DIR="./dist"
 
 # Clean previous builds
