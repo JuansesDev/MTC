@@ -70,3 +70,7 @@ test-vertical/
 temp_verify/
 output-test/
 local-tools/
+
+# Deployment / Distribution
+mtc-aur/
+publish.md
