@@ -42,3 +42,30 @@ jobs:
       if: env.NUGET_API_KEY != ''
       env:
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+
+    - name: Install PPA Tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y debhelper devscripts dput
+
+    - name: Import GPG Key
+      uses: crazy-max/ghaction-import-gpg@v6
+      with:
+        gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+        passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
+    - name: Build and Publish PPA
+      env:
+        GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
+      run: |
+        chmod +x prepare_ppa.sh
+        ./prepare_ppa.sh
+        
+        cd ppa_build/mtc-1.0.0
+        # Sign the package
+        debuild -S -sa -k$GPG_KEY_ID
+        
+        cd ..
+        # Upload to Launchpad
+        # Note: Ensure 'ppa:juansesdev/mtc' exists on Launchpad
+        dput ppa:juansesdev/mtc mtc_1.0.0_source.changes
