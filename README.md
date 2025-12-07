@@ -30,7 +30,16 @@ sudo dpkg -i mtc_1.0.0_amd64.deb
 ```
 
 ### Manual (Binary)
-Download the binary for your OS from [Releases](https://github.com/JuansesDev/MTC/releases), extract it, and add it to your PATH.
+Download the binary for your OS from [Releases](https://github.com/JuansesDev/MTC/releases).
+
+**Windows**:
+1. Download `mtc-win-x64-1.0.0.tar.gz`.
+2. Extract the contents (Windows 10/11 supports tar.gz natively, or use 7-Zip).
+3. Add the extracted folder to your System PATH.
+
+**Linux/macOS**:
+1. Download the `.tar.gz` for your OS.
+2. Extract and move the binary to `/usr/local/bin` or add to PATH.
 
 ## Usage
 
