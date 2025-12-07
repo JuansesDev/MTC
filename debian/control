@@ -1,10 +1,10 @@
 Source: mtc
 Section: devel
 Priority: optional
-Maintainer: Juanse <juanse@example.com>
+Maintainer: JuansesDev <juansesdev@gmail.com>
 Build-Depends: debhelper (>= 11), dotnet-sdk-9.0
 Standards-Version: 4.1.3
-Homepage: https://github.com/example/mtc
+Homepage: https://github.com/JuansesDev/MTC
 
 Package: mtc
 Architecture: any
