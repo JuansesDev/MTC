@@ -74,4 +74,20 @@ local-tools/
 # Deployment / Distribution
 mtc-aur/
 publish.md
+.docker_keys/
 
+# GPG Keys (CRITICAL - Never commit!)
+*.key
+*.gpg
+*.asc
+private.key
+public.key
+
+# Debian source packages
+*.dsc
+*.changes
+*.buildinfo
+*.upload
+*.tar.xz
+*.tar.gz
+*.diff.gz
