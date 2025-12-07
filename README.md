@@ -13,6 +13,11 @@ MTC is a powerful, architecture-aware CLI tool for scaffolding .NET projects. It
 
 ## Installation
 
+### Arch Linux (AUR)
+```bash
+yay -S mtc-bin
+```
+
 ### .NET Tool (Global)
 ```bash
 dotnet tool install -g MTC
@@ -25,35 +30,74 @@ sudo dpkg -i mtc_1.0.0_amd64.deb
 ```
 
 ### Manual (Binary)
-Download the binary for your OS, extract it, and add it to your PATH.
+Download the binary for your OS from [Releases](https://github.com/JuansesDev/MTC/releases), extract it, and add it to your PATH.
 
 ## Usage
 
+### List Available Templates
+```bash
+mtc list
+```
+
 ### Create a New Project
 ```bash
-mtc new CleanArch MyAwesomeApp
+# Console Application
+mtc new ConsoleApp MyApp
+
+# MVC Monolith
+mtc new MvcMonolith MyWebApp
+
+# Clean Architecture
+mtc new CleanArch MyCleanApp
+
+# Vertical Slice Architecture
+mtc new VerticalSlice MyApiApp
 ```
 
-### Add a Feature (Vertical Slice / Clean Arch / MVC)
+### Add Features to Existing Projects
+MTC automatically detects your project architecture and generates the appropriate files.
+
+#### Add a Feature (CRUD)
 ```bash
-cd MyAwesomeApp
-mtc add feature CreateOrder --fields "ProductId:guid Quantity:int"
+# Generates Controller, Commands/Queries, and Models based on your architecture
+mtc add feature Product --fields "Name:string Price:decimal Stock:int"
 ```
 
-### Add a Value Object
+#### Add a Value Object
 ```bash
 mtc add value-object Money --fields "Amount:decimal Currency:string"
+mtc add value-object Email --fields "Value:string"
 ```
 
-### Add a DTO
+#### Add a DTO
 ```bash
-mtc add dto UserDto --fields "Username:string Email:string"
+mtc add dto UserDto --fields "Username:string Email:string Age:int"
+mtc add dto ProductDto --fields "Id:guid Name:string Price:decimal"
 ```
 
-### Configuration
+### Configuration Commands
 ```bash
-mtc config set Author "Juanse"
+# Set a configuration value
+mtc config set Author "Your Name"
+mtc config set Company "Your Company"
+
+# Get a configuration value
+mtc config get Author
+
+# List all configuration
+mtc config list
 ```
+
+### Debug Commands
+```bash
+# Show detected project context (architecture, root path, etc.)
+mtc debug-context
+```
+
+### Field Types
+When using `--fields`, you can use these types:
+- `string`, `int`, `decimal`, `bool`, `datetime`, `guid`
+- Example: `"Name:string Price:decimal IsActive:bool CreatedAt:datetime"`
 
 ## Development
 
@@ -67,10 +111,19 @@ dotnet build
 dotnet test
 ```
 
-### Release
-Use the `publish.sh` script to generate cross-platform binaries:
+### Publish Binaries
 ```bash
 ./publish.sh
+```
+
+### Publish to AUR (Maintainers only)
+```bash
+./publish_aur.sh
+```
+
+### Build Debian Package (Maintainers only)
+```bash
+./publish_deb.sh
 ```
 
 ## License
