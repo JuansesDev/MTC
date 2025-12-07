@@ -48,4 +48,5 @@ tar -czvf ../mtc-osx-x64-$VERSION.tar.gz *
 cd ../..
 
 echo "✅ Build Complete! Artifacts are in $OUTPUT_DIR"
-ls -lh $OUTPUT_DIR/*.{tar.gz,zip}
+echo "✅ Build Complete! Artifacts are in $OUTPUT_DIR"
+ls -lh $OUTPUT_DIR/*.tar.gz
